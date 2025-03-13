@@ -1,3 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
 body{
-    background-color: rgb(223, 14, 14);
+    background-color: rgb(44, 44, 44);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 10px;
+}
+
+.projectDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(116, 134, 151);
+    width: 400px;
+    height: 96vh;
+    border-radius: 10px;
+}
+.projectList{
+    width: 95%;
+    height: 95%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.taskDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: rgb(174, 192, 209);
+    width: 77vw;
+    height: 96vh;
+    border-radius: 10px;
+}
+.taskList{
+    height: 90%;
+    width: 98%;
+    margin-left: 5px;
+    overflow: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.projectBtn:after{
+    content: "Add Porject";
+}
+
+
+.taskBtn:after{
+    content: "Add task";
+}
+
+.deleteProjectBtn:after{
+    content: "Delete Porject";
+}
+
+.projectItem{
+    color: white;
+    margin: 2px;
+    width: 95%;
+    height: 40px;
+    background-color: rgb(80, 103, 126);
+    text-align: center;
+    border-radius: 7px;
+    line-height: 37px;
+}
+
+.projectItem:hover{
+    border: solid rgb(185, 222, 255) 2px;
+    cursor:pointer;
+    line-height: 32px;
+}
+
+.taskItem{
+    color: white;
+    margin: 5px;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(80, 103, 126);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    width: 150px;
+    height: 35px;
+    color:white;
+    background-color: rgb(38, 72, 105);
+}
+button:hover{
+    background-color: rgb(74, 113, 153);
+    cursor:pointer;
+}
+
+.popupContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.popupForm{
+    background-color: rgb(228, 242, 255);
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popupHeader{
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(38, 72, 105);
+    border-radius: 10px 0 0 0;
+}
+.popupTitle{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.redx{
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 17px;
+}
+.redx:hover{
+    background-color: rgb(255, 73, 73);
+    cursor: pointer;
+}
+.redx:after{
+    content: "x";
+}
+
+.inputs{
+    width: 250px;
+    height: 30px;
+    margin-top: 50px;
+}
+
+textarea{
+    margin-top: 50px;
+    width: 350px;
+    height: 150px;
+}
+
+.deadline{
+    margin-top: 50px;
+}
+
+.taskDesc{
+    margin: 10px;
+    margin-bottom: -25px;
+    line-height: 22px;
+    text-align: left;
+    padding: 7px;
+    background-color: rgb(54, 73, 92);
+    border-radius: 10px;
+}
+
+.priority{
+    content: "Priority: ";
 }
